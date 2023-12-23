@@ -1,0 +1,148 @@
+header{
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    background: rgba(48, 48, 48, 0.40);
+    backdrop-filter: blur(2.5px);
+    top: 0;
+    left: 0;
+    padding-top:20px ;
+    padding-bottom:20px ;
+
+}
+header .container{
+    max-width: 1216px;
+    width: 85%;
+    margin: 0 auto;
+}
+header .container menu{
+    width: 60%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+header .container menu li {
+    text-decoration: none;
+    font-family: "NewHeroMedium" ;
+    color: #Fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.18px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+header .container menu li a:nth-child(2){
+    text-decoration: underline;
+}
+header .container a{
+    width: 15%;
+    color: #Fff;
+    font-family:"NewHeroMedium";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+header .sand_panel{
+    display: none;
+}
+@media (max-width: 900px) {
+    header .container{
+        width: 90%;
+    }
+    header .container menu,
+    header .container .telIcon  {
+        display: none;
+    }
+    header .sand_panel{
+        display: flex;
+        width: 40px;
+        height: 20px;
+        flex-direction: column;
+        align-self: center;
+        justify-content: space-between;
+         cursor: pointer;
+         background: green;
+         position: relative;
+    }
+    header .sand_panel div{
+        width: 100%;
+        height: 3px;
+        background: #FFF;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+    }
+    header .sand_panel div:nth-child(3){
+      width: 200px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-1.5px);
+      left: 0;
+    }
+    header .sand_panel div:nth-child(2){
+      
+    }
+  .crossLine1 {
+    opacity: 0;  
+  }
+  .crossLine2 {
+    transform: rotate(90deg);
+  }
+  .crossLine3 {
+    transform: rotate(-45deg);   
+  }
+  .crossLine4{
+    opacity: 0; 
+  }
+}
+/* ----------------------- */
+.burger-menu{
+    width: 100%;
+    max-width: 900px;
+    display: none;
+    margin: 0 auto;
+}
+.burger-menu menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgba(48, 48, 48, 0.40);
+    margin: 0;
+    padding: 10px;
+    list-style-type: none;
+    justify-content: space-between;
+    opacity: 0; 
+    transition: opacity 0.6s ease-in-out; 
+  }
+  .burger-menu.active menu {
+    opacity: 1; 
+  }
+   
+  .burger-menu menu li {
+    margin-bottom: 10px;
+    font-size:17px; 
+    font-family: "NewHeroMedium" ;
+    line-height: 8px;
+
+  }
+  .burger-menu menu a {
+    text-decoration: none;
+    display: block;
+    padding: 8px 0;
+     color: #fff; 
+     cursor: pointer;
+  }
+  .burger-menu menu a:hover{
+    color: #69ABED; 
+    cursor: pointer;
+  }
+  
+
+  
+ 

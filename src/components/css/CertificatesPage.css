@@ -1,0 +1,79 @@
+.certificates_main{
+    width: 100%;
+    margin-top: 250px;
+    margin-bottom: 250px;
+}
+
+.certificates_main .certificates_container{
+    max-width: 1216px;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.certificates_main .certificates_info{
+    width: 480px;
+}
+.certificates_main .certificates_info h2{
+    color: #151515;
+    font-family: "NewHeroMedium";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 50px; /* 125% */
+    margin-bottom: 20px;
+}
+.certificates_main .certificates_info .line{
+    width: 30px;
+    border-top: 4px solid #4777A7;
+    margin-bottom: 30px;
+    margin-bottom: 40px;
+}
+.certificates_main .certificates_info h5{
+    color: #777;
+    font-family: "NewHeroMedium";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+.certificates_main .certificates_info p{
+    color: #151515;
+    font-family: "NewHeroMedium";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+@media (max-width: 900px) {
+.certificates_main{
+    width: 100%;
+    margin-bottom: 50px; 
+    margin-top: 80px;  
+ }
+.certificates_main .certificates_container{
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+   
+
+    }
+    .certificates_main .certificates_container img{
+        
+       margin-bottom: 20px;
+    
+        }
+.certificates_main .certificates_info{
+    width: 100%;
+    }
+    
+.certificates_main .certificates_info h2{
+    font-size: 30px;
+    line-height: 40px; /* 125% */   
+    }
+.certificates_main .certificates_info .line{
+        display: none;
+    }
+}

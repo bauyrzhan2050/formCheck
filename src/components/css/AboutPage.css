@@ -1,0 +1,111 @@
+.aboutPage_main{
+    width: 100%;
+    
+}
+.aboutPage_main .aboutPage_mainPic{
+    width: 100%;
+    height: 40vh;
+    background: url(../../img/1111.jpg) no-repeat center/cover;
+ 
+}
+.aboutPage_main .aboutPage_container{
+    max-width: 1216px;
+    width: 85%;
+    margin: 0 auto; 
+    
+}
+.aboutPage_main .aboutPage_container>h2{
+    color: #151515;
+    font-family: "NewHeroMedium";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 50px; 
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 50px;
+    animation-name: move;
+    animation-duration: 1s;
+    transform: translateY(-100px);
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.aboutPage_main .aboutPage_container>p{
+    text-align: center;
+    font-family: "NewHeroMedium";
+    color: #151515;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    animation-name: move;
+    animation-duration: 1s;
+    transform: translateX(-100px);
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.aboutPage_main .aboutPage_infoBlog{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 100px;
+   
+}
+.aboutPage_main .aboutPage_line{
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 50px;
+}
+.aboutPage_main .aboutPage_line nav{
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+.aboutPage_main .aboutPage_line .line{
+    width: 30px;
+    border-top: 4px solid #4777A7;
+    margin-bottom: 30px;
+}
+.aboutPage_main .aboutPage_line nav p{
+    color: #777;
+        font-family: "NewHeroRegular" ;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 24px; 
+}
+@media (max-width: 900px) {
+    .aboutPage_main{
+        width: 100%; 
+       
+    }
+    .aboutPage_main .aboutPage_mainPic{
+        width: 100%;
+       background-position: left;
+    }
+    
+    .aboutPage_main .aboutPage_container{
+        width: 100%; 
+        padding: 20px;
+    }
+    .aboutPage_main .aboutPage_container>h2{
+        font-size: 30px;
+        line-height: 50px;
+    }
+    .aboutPage_main .aboutPage_line{
+        flex-direction: column;
+     }
+     .aboutPage_main .aboutPage_line:nth-child(even){
+        flex-direction: column-reverse;
+     }
+     .aboutPage_main .aboutPage_line nav{
+       width: 100%;
+    }
+     .aboutPage_main .aboutPage_line .line{
+        display: none;
+     }
+     .aboutPage_main .aboutPage_line nav p{
+        font-size: 14px;
+        line-height: 24px; 
+    }
+
+}

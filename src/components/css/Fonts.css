@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "NewHeroBold" ;
+    src: url(../../fonts/NewHeroBold.otf);
+}
+@font-face {
+    font-family: "NewHeroExtraBold" ;
+    src: url(../../fonts/NewHeroExtraBold.otf);
+}
+@font-face {
+    font-family: "NewHeroHairLine" ;
+    src: url(../../fonts/NewHeroHairline.otf);
+}
+@font-face {
+    font-family: "NewHeroLight" ;
+    src: url(../../fonts/NewHeroLight.otf);
+}
+@font-face {
+    font-family: "NewHeroMedium" ;
+    src: url(../../fonts/NewHeroMedium.otf);
+}
+
+@font-face {
+    font-family: "NewHeroRegular" ;
+    src: url(../../fonts/NewHeroRegular.otf);
+}
+@font-face {
+    font-family: "NewHeroSemiBold" ;
+    src: url(../../fonts/NewHeroSemiBold.otf);
+}
+@font-face {
+    font-family: "NewHeroSuper" ;
+    src: url(../../fonts/NewHeroSuper.otf);
+}
+@font-face {
+    font-family: "NewHeroThin" ;
+    src: url(../../fonts/NewHeroThin.otf);
+}
+@font-face {
+    font-family: "NewHeroUltraLight" ;
+    src: url(../../fonts/NewHeroUltraLight.otf);
+}
+
+
