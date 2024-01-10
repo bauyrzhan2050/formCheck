@@ -1,5 +1,7 @@
 .main_blog{
     width: 100%;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 .main_blog .container{
     max-width: 1216px;
@@ -8,7 +10,8 @@
     display: flex;
    /* margin-top: 100px;  */
    overflow: hidden;
-    
+    justify-content: space-between;
+    align-items: center;
 }
 
 .main_blog .container>img{
@@ -21,12 +24,13 @@
 }
 
 .main_blog .container .left_side{
-   padding: 100px;
+ 
 }
 .main_blog .container .left_side .info_blog{
    width: 560px;
    margin-bottom: 20px;
 }
+
 .main_blog .container .left_side .info_blog h2{
     color: #151515;
     font-family: "NewHeroMedium";
@@ -45,10 +49,9 @@
     display: none;
 } */
 .main_blog .container .left_side .info_blog p{
-    
     color: #777;
     font-family: "NewHeroMedium";
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
@@ -61,12 +64,12 @@
     font-weight: 700;
     line-height: 24px;
 }
-.main_blog .container .left_side  button{
-    width: 250px;
-    height: 50px;
+.main_blog .container .left_side a{
+    /* width: 250px;
+    height: 50px; */
     flex-shrink: 0;
     background: #4777A7;
-    color: #FFF;
+    color: #fff;
     text-align: center;
     font-family: "NewHeroMedium";
     font-size: 18px;
@@ -74,39 +77,36 @@
     font-weight: 700;
     line-height: 30px; 
     cursor: pointer;
+    transition: .5s;
+    padding: 10px 55px;
+}
+.main_blog .container .left_side a:hover{
+    box-shadow: 0 0 10px 0 #69ABED inset, 0 0 10px 4px #69ABED;
 }
 
 @media (max-width: 900px){
     .main_blog{
-        padding: 60px 0px;
-        
+        padding: 60px 0px;  
     }
     .main_blog .container{
         width: 90%;
+        flex-direction: column;
     }
-    .main_blog .container>img{
+    .main_blog .container .light_galleryLink,
+    .main_blog .container .light_galleryImg{
         display: none;
     }
+
     .main_blog .container .left_side {
         padding: 0;
     }
     .main_blog .container .left_side .info_blog{
         width: 100%; 
-      
     }
     .main_blog .container .left_side .info_blog .line{
         position: relative;
-        margin-bottom: 450px;
     }
-    .main_blog .container .left_side .info_blog .line::after{
-        content: "";
-        width: 90vw;
-        height: 400px;
-        background: url(../../img/blogTwoPic.svg) no-repeat center/cover;
-        position: absolute;
-        top: 20px;
-        left: 0;
-    }
+   
     .main_blog .container .left_side .info_blog h2{
         font-size: 30px;
         line-height: 50px;
@@ -116,5 +116,10 @@
     .main_blog .container .left_side .info_blog p{
         font-size: 18px;
         line-height: 30px;
+    }
+    .main_blog .container .left_side a{
+        
+        font-size: 14px;
+        padding: 10px 40px;
     }
 }

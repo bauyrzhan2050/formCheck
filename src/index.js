@@ -10,14 +10,14 @@ import ProjectFilePage from "./components/ProjectFilePage";
 import CertificatesPage from "./components/CertificatesPage";
 import AboutPage from "./components/AboutPage";
 import ContactsPage from "./components/ContactsPage";
-// import ModalWindow from "./components/ModalWindow";
-
+import Vidjet from "./components/Vidjet";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
     <Router>
       <Header />
+      <Vidjet />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/projects" element={<ProjectFilePage />} />
@@ -26,7 +26,6 @@ root.render(
         <Route path="/about" element={<AboutPage />} />
       </Routes>
       <Footer />
-      {/* <ModalWindow /> */}
     </Router>
   </React.StrictMode>
 );

@@ -18,12 +18,12 @@
     font-weight: 500;
     line-height: 50px; 
     margin-bottom: 20px;
-    animation-name: move;
+    /* animation-name: move;
     animation-duration: 3s;
     transform: translateY(-300px);
     animation-fill-mode: forwards;
-    opacity: 0;
-    animation-delay: 3s;
+    opacity: 0; */
+    
 }
 
 .our_parthners .slider_component{

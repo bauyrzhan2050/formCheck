@@ -1,5 +1,7 @@
 import "./css/About.css";
 import Picture from "../img/blogTwoPic.svg";
+import { HashLink as Link } from "react-router-hash-link";
+
 // import React, { useState } from "react";
 // LightGallery.css
 import LightGallery from "lightgallery/react/Lightgallery.es5";
@@ -28,11 +30,11 @@ function About() {
   return (
     <div className="main_blog">
       <div className="container">
-        {/* <LightGallery plugins={[lgZoom, lgAutoplay, lgShare, lgRotate]}>
-          <a href={Picture}> */}
-        <img src={Picture} />
-        {/* </a> */}
-        {/* </LightGallery> */}
+        <LightGallery plugins={[lgZoom, lgAutoplay, lgShare, lgRotate]}>
+          <a className="light_galleryLink" href={Picture}>
+            <img className="light_galleryImg" src={Picture} />
+          </a>
+        </LightGallery>
         <div className="left_side">
           <div className="info_blog">
             <h2>Об организации</h2>
@@ -60,7 +62,7 @@ function About() {
             </p>
           </div>
 
-          <button>Узнать больше</button>
+          <Link to="/about#about">Узнать больше</Link>
         </div>
       </div>
     </div>

@@ -2,6 +2,9 @@ import "./css/OurParthners.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useEffect } from "react";
+import WOW from "wowjs";
+import "wowjs/css/libs/animate.css";
 
 const settings = {
   arrows: true,
@@ -23,11 +26,22 @@ const settings = {
   ],
 };
 function OurParthners() {
+  useEffect(() => {
+    const wow = new WOW.WOW({
+      boxClass: "wow",
+      animateClass: "animated",
+      offset: 0,
+      mobile: false,
+      live: true,
+    });
+    wow.init();
+    return () => wow.sync();
+  }, []);
   return (
     <div className="our_parthners">
       <div className="container">
         <div className="container_ins">
-          <h2>Наши партнеры</h2>
+          <h2 className="wow fadeInDown">Наши партнеры</h2>
           <div className="line"></div>
 
           <Slider {...settings} className="slider_component">

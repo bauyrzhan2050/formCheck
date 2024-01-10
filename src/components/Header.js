@@ -48,10 +48,9 @@ function Header() {
           <h3>+7(777)777-77-77</h3>
         </a>
         <div className="sand_panel" onClick={handleToggle}>
-          <div className={isCross ? "crossLine1" : ""}></div>
-          <div className={isCross ? "crossLine2" : ""}></div>
-          <div className={isCross ? "crossLine3" : ""}></div>
-          <div className={isCross ? "crossLine4" : ""}></div>
+          <div className={isCross ? "crossLine1 crossActive" : ""}></div>
+          <div className={isCross ? "crossLine2 crossActive" : ""}></div>
+          <div className={isCross ? "crossLine3 crossActive" : ""}></div>
         </div>
       </div>
       {/* --------------------------- */}

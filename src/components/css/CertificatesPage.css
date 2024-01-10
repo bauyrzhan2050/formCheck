@@ -3,14 +3,69 @@
     margin-top: 250px;
     margin-bottom: 250px;
 }
-
+.certificates_main .title{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #151515;
+    font-family: "NewHeroMedium";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 50px; /* 125% */
+    margin-bottom: 50px;
+}
 .certificates_main .certificates_container{
     max-width: 1216px;
     width: 85%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 100px;
 }
+.certificates_main .many_certificates{
+    max-width: 1216px;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+.certificates_main .many_certificates .list_certificates{
+    border: 1px solid #E9E9E9;
+    width: 383.95px;
+   
+    flex-shrink: 0;
+    margin-bottom: 33px;
+    
+}
+.certificates_main .many_certificates .list_certificates img{
+   margin-bottom: 20px;
+    
+}
+.certificates_main .many_certificates .list_certificates>h4{
+    margin-bottom: 6px;
+    color: #151515;
+    font-family: "NewHeroMedium";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 28px;
+    
+
+ }
+ .certificates_main .many_certificates .list_certificates p{
+    margin-bottom: 20px;
+    padding-left: 28px;
+    color: #666;
+    font-family: "NewHeroMedium";
+    font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+ }
 .certificates_main .certificates_info{
     width: 480px;
 }
@@ -54,12 +109,16 @@
     margin-top: 80px;  
  }
 .certificates_main .certificates_container{
-    width: 100%;
+    width: 90%;
     padding: 20px;
     flex-direction: column;
    
+}
+.certificates_main .certificates_container .light_galleryLink,
+.certificates_main .certificates_container .light_galleryImg{
+   width: 100%;
+}
 
-    }
     .certificates_main .certificates_container img{
         
        margin-bottom: 20px;
@@ -76,4 +135,17 @@
 .certificates_main .certificates_info .line{
         display: none;
     }
+    .certificates_main .many_certificates{
+        width: 90%;
+        margin: 0 auto;
+        
+    }
+    .certificates_main .many_certificates .list_certificates{
+        width: 100%;
+        
+    }
+    .certificates_main .many_certificates .list_certificates img{
+       width: 100%;
+         
+     }
 }

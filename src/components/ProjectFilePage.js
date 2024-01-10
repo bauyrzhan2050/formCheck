@@ -15,6 +15,16 @@ import Compl5 from "../img/compl5.svg";
 import Compl6 from "../img/compl6.svg";
 import Compl7 from "../img/compl7.svg";
 import Cross from "../img/cross.svg";
+import Fut1 from "../img/future1.svg";
+import Fut2 from "../img/future2.svg";
+import Fut3 from "../img/future3.svg";
+import Fut4 from "../img/future4.svg";
+import Fut5 from "../img/future5.svg";
+import Fut6 from "../img/future6.svg";
+import Fut7 from "../img/future7.svg";
+import Fut8 from "../img/future8.svg";
+import Fut from "../img/fnew.svg";
+
 import { useState } from "react";
 import Modal from "react-modal";
 import InputMask from "react-input-mask";
@@ -54,10 +64,9 @@ function ProjectFilePage() {
             <img src={Rec1} />
             <div className="projectFile_sectionColumn">
               <div className="projectFile_sectionText">
-                <h2>
-                  Международная стажировка <br /> Стажировка по программе
-                  Австрия, Чехия, Германия
-                </h2>
+                <h2>Международная стажировка</h2>
+                <h3>Стажировка по программе Австрия, Чехия, Германия</h3>
+
                 <p>Дата проведения: с 27 ноября по 4 декабря 2023 года</p>
               </div>
               <div className="projectFile_sectionBtnBlock">
@@ -79,10 +88,11 @@ function ProjectFilePage() {
             <img src={Rec2} />
             <div className="projectFile_sectionColumn">
               <div className="projectFile_sectionText">
-                <h2>
-                  Международная стажировка <br /> «Современные стандарты в
-                  арт-менеджменте: Опыт Турции, г. Стамбул»
-                </h2>
+                <h2>Международная стажировка</h2>
+                <h3>
+                  «Современные стандарты в арт-менеджменте: Опыт Турции, г.
+                  Стамбул»
+                </h3>
                 <p>Дата проведения: с 17 по 24 декабря 2023 года</p>
               </div>
               <div className="projectFile_sectionBtnBlock">
@@ -104,10 +114,8 @@ function ProjectFilePage() {
             <img src={Rec3} />
             <div className="projectFile_sectionColumn">
               <div className="projectFile_sectionText">
-                <h2>
-                  Международная стажировка <br /> «Менеджмент в высшем
-                  образовании на примере ОАЭ»
-                </h2>
+                <h2>Международная стажировка</h2>
+                <h3>«Менеджмент в высшем образовании на примере ОАЭ»</h3>
                 <p>Дата проведения: с 14 по 19 января 2024 года</p>
               </div>
               <div className="projectFile_sectionBtnBlock">
@@ -129,10 +137,8 @@ function ProjectFilePage() {
             <img src={Rec4} />
             <div className="projectFile_sectionColumn">
               <div className="projectFile_sectionText">
-                <h2>
-                  Международная стажировка <br /> «Медицинский бизнес в Южной
-                  Корее, г. Сеул»
-                </h2>
+                <h2>Международная стажировка</h2>
+                <h3>«Медицинский бизнес в Южной Корее, г. Сеул»</h3>
                 <p>Дата проведения: с 03 по 09 марта 2024 года</p>
               </div>
               <div className="projectFile_sectionBtnBlock">
@@ -154,10 +160,10 @@ function ProjectFilePage() {
             <img src={Rec5} />
             <div className="projectFile_sectionColumn">
               <div className="projectFile_sectionText">
-                <h2>
-                  Международная стажировка <br /> «Современные стандарты в
-                  арт-менеджменте: Опыт ОАЭ, г. Дубай»
-                </h2>
+                <h2>Международная стажировка</h2>
+                <h3>
+                  «Современные стандарты в арт-менеджменте: Опыт ОАЭ, г. Дубай»
+                </h3>
                 <p>Дата проведения: с 24 по 30 марта 2024 года</p>
               </div>
               <div className="projectFile_sectionBtnBlock">
@@ -180,7 +186,200 @@ function ProjectFilePage() {
     },
     {
       tabName: "Будущие ",
-      tabContent: <div></div>,
+      tabContent: (
+        <div>
+          <div className="projectFile_section">
+            <img src={Fut1} />
+            <div className="projectFile_sectionColumn">
+              <div className="projectFile_sectionText">
+                <h2>Международная стажировка</h2>
+                <h3> «Менеджмент в образовании ОАЭ»</h3>
+
+                <p>Дата проведения: с 27 ноября по 4 декабря 2023 года</p>
+              </div>
+              <div className="projectFile_sectionBtnBlock">
+                <button>Скачать программу</button>
+                <button
+                  onClick={() =>
+                    openModal(
+                      "Менеджмент в образовании ОАЭ C 27 ноября по 4 декабря 2023 года"
+                    )
+                  }
+                >
+                  Записаться на стажировку
+                </button>
+              </div>
+            </div>
+          </div>
+          {/* -------------------------------------1 */}
+          <div className="projectFile_section">
+            <img src={Fut8} />
+            <div className="projectFile_sectionColumn">
+              <div className="projectFile_sectionText">
+                <h2>Международная стажировка</h2>
+                <h3>«Медицинский бизнес: Beauty-индустрия, Южная Корея»</h3>
+                <p>Дата проведения: с 17 по 24 декабря 2023 года</p>
+              </div>
+              <div className="projectFile_sectionBtnBlock">
+                <button>Скачать программу</button>
+                <button
+                  onClick={() =>
+                    openModal(
+                      "Медицинский бизнес: Beauty-индустрия, Южная Корея C 17 по 24 декабря 2023 года"
+                    )
+                  }
+                >
+                  Записаться на стажировку
+                </button>
+              </div>
+            </div>
+          </div>
+          {/* -------------------------------------2 */}
+          <div className="projectFile_section">
+            <img src={Fut2} />
+            <div className="projectFile_sectionColumn">
+              <div className="projectFile_sectionText">
+                <h2>Международная стажировка</h2>
+                <h3>«STEAM-технологии в обучении, Сингапур»</h3>
+                <p>Дата проведения: с 14 по 19 января 2024 года</p>
+              </div>
+              <div className="projectFile_sectionBtnBlock">
+                <button>Скачать программу</button>
+                <button
+                  onClick={() =>
+                    openModal(
+                      "«STEAM-технологии в обучении, Сингапур» C 14 по 19 января 2024 года"
+                    )
+                  }
+                >
+                  Записаться на стажировку
+                </button>
+              </div>
+            </div>
+          </div>
+          {/* -------------------------------------3 */}
+          <div className="projectFile_section">
+            <img src={Fut3} />
+            <div className="projectFile_sectionColumn">
+              <div className="projectFile_sectionText">
+                <h2>Международная стажировка</h2>
+                <h3>
+                  «Система организации институтов адвокатуры, нотариата,
+                  медиации и международных судов Англии: опыт и современные
+                  тенденции, Англия»
+                </h3>
+                <p>Дата проведения: с 03 по 09 марта 2024 года</p>
+              </div>
+              <div className="projectFile_sectionBtnBlock">
+                <button>Скачать программу</button>
+                <button
+                  onClick={() =>
+                    openModal(
+                      "«Система организации институтов адвокатуры, нотариата, медиации и международных судов Англии: опыт и современные тенденции, Англия» C 03 по 09 марта 2024 года"
+                    )
+                  }
+                >
+                  Записаться на стажировку
+                </button>
+              </div>
+            </div>
+          </div>
+          {/* -------------------------------------4 */}
+          <div className="projectFile_section">
+            <img src={Fut5} />
+            <div className="projectFile_sectionColumn">
+              <div className="projectFile_sectionText">
+                <h2>Международная стажировка</h2>
+                <h3>«Современные стандарты в образовании, США »</h3>
+                <p>Дата проведения: с 24 по 30 марта 2024 года</p>
+              </div>
+              <div className="projectFile_sectionBtnBlock">
+                <button>Скачать программу</button>
+                <button
+                  onClick={() =>
+                    openModal(
+                      "«Современные стандарты в образовании, США» C 24 по 30 марта 2024 года"
+                    )
+                  }
+                >
+                  Записаться на стажировку
+                </button>
+              </div>
+            </div>
+          </div>
+          {/* -------------------------------------5*/}
+          <div className="projectFile_section">
+            <img src={Fut} />
+            <div className="projectFile_sectionColumn">
+              <div className="projectFile_sectionText">
+                <h2>Международная стажировка</h2>
+                <h3>« Новые технологии в строительной отрасли, Турция»</h3>
+                <p>Дата проведения: с 24 по 30 марта 2024 года</p>
+              </div>
+              <div className="projectFile_sectionBtnBlock">
+                <button>Скачать программу</button>
+                <button
+                  onClick={() =>
+                    openModal(
+                      "«Новые технологии в строительной отрасли, Турция» C 24 по 30 марта 2024 года"
+                    )
+                  }
+                >
+                  Записаться на стажировку
+                </button>
+              </div>
+            </div>
+          </div>
+          {/* -------------------------------------6 */}
+          <div className="projectFile_section">
+            <img src={Fut6} />
+            <div className="projectFile_sectionColumn">
+              <div className="projectFile_sectionText">
+                <h2>Международная стажировка</h2>
+                <h3>«WORLDSKILLS 2024, Франция»</h3>
+                <p>Дата проведения: с 24 по 30 марта 2024 года</p>
+              </div>
+              <div className="projectFile_sectionBtnBlock">
+                <button>Скачать программу</button>
+                <button
+                  onClick={() =>
+                    openModal(
+                      "WORLDSKILLS 2024, Франция C 24 по 30 марта 2024 года"
+                    )
+                  }
+                >
+                  Записаться на стажировку
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* -------------------------------------7 */}
+          <div className="projectFile_section">
+            <img src={Fut7} />
+            <div className="projectFile_sectionColumn">
+              <div className="projectFile_sectionText">
+                <h2>Международная стажировка</h2>
+                <h3>«Образование в новом мире, Япония»</h3>
+                <p>Дата проведения: с 24 по 30 марта 2024 года</p>
+              </div>
+              <div className="projectFile_sectionBtnBlock">
+                <button>Скачать программу</button>
+                <button
+                  onClick={() =>
+                    openModal(
+                      "«Образование в новом мире, Япония» C 24 по 30 марта 2024 года"
+                    )
+                  }
+                >
+                  Записаться на стажировку
+                </button>
+              </div>
+            </div>
+          </div>
+          {/* -------------------------------------8 */}
+        </div>
+      ),
     },
     {
       tabName: "Завершенные ",
@@ -274,7 +473,7 @@ function ProjectFilePage() {
     },
   ];
   return (
-    <div className="projectFile">
+    <div className="projectFile" id="projects">
       <Modal
         className="bookModal"
         isOpen={modalIsOpen}
@@ -283,7 +482,6 @@ function ProjectFilePage() {
       >
         <form className="appointment_insaidBlock">
           <img className="btnClouse" src={Cross} onClick={closeModal} />
-
           <h2>Записаться на стажировку</h2>
           <div className="line"></div>
           <div className="p">
@@ -304,7 +502,6 @@ function ProjectFilePage() {
             required
             onChange={numberValidation}
           />
-
           <InputMask
             required
             type="tel"

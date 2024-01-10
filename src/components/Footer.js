@@ -1,8 +1,7 @@
 import "./css/Footer.css";
 import LogoSvg from "../img/svg/Logo";
 import sos from "../img/social.svg";
-import { Link } from "react-router-dom";
-
+import { HashLink as Link } from "react-router-hash-link";
 function Footer() {
   return (
     <footer>
@@ -18,21 +17,21 @@ function Footer() {
               <div>
                 {" "}
                 <li>
-                  <Link to="/"> Главная</Link>
+                  <Link to="/#main"> Главная</Link>
                 </li>
                 <li>
-                  <Link to="/about"> О Компании</Link>
+                  <Link to="/about#about"> О Компании</Link>
                 </li>
               </div>
               <div>
                 {" "}
                 <li>
                   {" "}
-                  <Link to="/projects">Проекты</Link>{" "}
+                  <Link to="/projects#projects">Проекты</Link>{" "}
                 </li>
                 <li>
                   {" "}
-                  <Link to="/certificates">Сертификаты</Link>{" "}
+                  <Link to="/certificates#certificates">Сертификаты</Link>{" "}
                 </li>
               </div>
             </menu>

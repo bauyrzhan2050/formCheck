@@ -7,7 +7,7 @@ import PicFive from "../img/picFive.svg";
 import Pic from "../img/hhh.svg";
 function AboutPage() {
   return (
-    <div className="aboutPage_main">
+    <div className="aboutPage_main" id="about">
       <div className="aboutPage_mainPic"></div>
 
       <div className="aboutPage_container">

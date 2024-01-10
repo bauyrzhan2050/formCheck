@@ -8,7 +8,7 @@
     width: 100%;
     height: 430px;
     background: url(../../img/Black.svg) no-repeat center/cover ;
-
+    
 }
 .projectFile .projectFile_menu{
     width: 100%;
@@ -51,7 +51,6 @@
 .projectFile .projectFile_menu .tabs .tab{
     color: #FFF;
     text-align: center;
-    
     font-family: "NewHeroMedium";
     font-size: 18px;
     font-style: normal;
@@ -59,12 +58,17 @@
     line-height: 30px; /* 166.667% */
     padding: 10px 30px;
     cursor: pointer;
-    background: #A4BED8;
+    background: #A4BED8; 
+   
 }
 .projectFile .projectFile_menu .tabs .tab:hover{
     background: #4777A7;
     cursor: pointer;
 }
+.projectFile .projectFile_menu .tabs .tab.active {
+    background: #4777A7;
+
+  }
 .projectFile .projectFile_section{
     max-width: 1216px;
     width: 85%;
@@ -92,8 +96,20 @@
     font-style: normal;
     font-weight: 500;
     line-height: 140%;
+    margin-top: 40px;
+    text-transform:uppercase;
+}
+.projectFile .projectFile_section .projectFile_sectionText h3{
+    color: #151515;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "NewHeroMedium";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
     margin-bottom: 10px;
-    margin-top: 20px;
+  
+   
 }
 .projectFile .projectFile_section .projectFile_sectionText p{
     color: #777;
@@ -123,6 +139,10 @@
     background: #4777A7;
     padding: 8px 30px;
     cursor: pointer;
+    transition: all 150ms ease-in-out
+}
+.projectFile .projectFile_sectionBtnBlock button:nth-child(1):hover{
+    box-shadow: 0 0 10px 0 #69ABED inset, 0 0 10px 4px #69ABED;
 }
 .projectFile .projectFile_sectionBtnBlock button:nth-child(2){ 
     color: #FFF;
@@ -133,8 +153,13 @@
     font-weight: 700;
     line-height: 30px; /* 166.667% */
     background: #69ABED;
-        padding: 8px 20px;
-        cursor: pointer;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: all 150ms ease-in-out
+
+}
+.projectFile .projectFile_sectionBtnBlock button:nth-child(2):hover{
+    box-shadow: 0 0 10px 0 #69ABED inset, 0 0 10px 4px #69ABED;
 }
 /* -------------завершенные */
 .projectFile .projectFile_completedBox{
@@ -176,9 +201,7 @@
     line-height: 150%; /* 24px */
 }
 /* ------------------------- */
-
 .bookModal{
-    width: 50%;
     margin: 0 auto;
     background: #fff;
 }
@@ -191,8 +214,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;  
-   
+    flex-direction: column;    
 }
 .bookModal h2{
     color: #151515;
@@ -205,8 +227,7 @@
     margin-bottom: 20px;
 }
 .bookModal .p{
-   width: 80%;
- 
+    width: 80%;
 }
 .bookModal p{
     color: #444;
@@ -217,7 +238,6 @@
     font-weight: 400;
     line-height: 30px; /* 150% */  
     margin-bottom: 20px;
- 
 }
 .bookModal .line{
     width: 30px;
@@ -247,11 +267,9 @@
     cursor: pointer;
     transition: ease 0.3s;
 }
-
 .bookModal .btnClouse:hover{
     transform: scale(1.1);
 }
-
 .bookModal button{
     color: #FFF;
     text-align: center;
@@ -264,30 +282,30 @@
     padding: 10px 39px;
     cursor: pointer;
 }
-.bookModal a:hover{
-    background: #4777A7;
+.bookModal button:hover{
+    box-shadow: 0 0 10px 0 #69ABED inset, 0 0 10px 4px #69ABED;
+
 }
+/* .bookModal a:hover{
+    background: #4777A7;
+
+} */
 .active{
     display: flex;
 }
 /* --------------------media */
-
 @media (max-width: 900px){
     .projectFile .projectFile_cont{
-        width: 100%;
-       
+        width: 100%;  
     }
     .projectFile .projectFile_cont .img{
         width: 100%;
         height: 300px;
         background: url(../../img/Black.svg) no-repeat center/cover ;
-    
     }
     .projectFile .projectFile_menu{
-        width: 100%;  
-        
+        width: 100%;   
     }
-    
     .projectFile .projectFile_menu .projectFile_menuFlex .projectFile_text {
       width: 100%;
     }
@@ -302,13 +320,11 @@
         flex-direction: column;
     }
     .projectFile .projectFile_menu .tabs{
-        width: 100%;
-       
+        width: 100%;  
     }
     .projectFile .projectFile_menu .tabs .tab{
         font-size: 15px;
         padding: 5px 8px;  
-        
     }
     .projectFile .projectFile_section{
         flex-direction: column;
@@ -341,15 +357,38 @@
     }
     .projectFile .projectFile_sectionComplited img{
         width: 100%;
-        
      }
      .projectFile .projectFile_sectionComplited h2{
         font-size: 16px;
-        line-height: 120%; 
-        
+        line-height: 120%;   
     }
     .projectFile .projectFile_sectionComplited p{
         font-size: 14px;
         line-height: 150%; 
     }
+    /* --------------------modal------------- */
+     .bookModal{
+       display: flex;
+       width: 90%;
+    }
+    .bookModal input{
+        width: 90%;
+        height: 45px; 
+    }
+    .bookModal h2{
+       font-size: 23px;
+       margin-bottom: 10px;
+    }
+    .bookModal .p{
+        width: 90%;
+    }
+    .bookModal p{
+       font-size: 14px;
+       margin-bottom: 10px;
+       line-height: 25px;
+    }
+    .bookModal .line{
+        margin-bottom: 10px;
+    }
+    
 }
