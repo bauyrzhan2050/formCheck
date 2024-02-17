@@ -1,7 +1,7 @@
 
 .mySlider{
     width: 100%;
-    height: 100vh;
+    height: 100svh; 
     /* position: relative; */
     position: relative;
     overflow: hidden;
@@ -10,8 +10,6 @@
     width: 100%;
     height: 100%;
 }
-
-
 .mySlider .slide nav .slider-container{
     height: 100vh;
     max-width: 1216px;
@@ -31,7 +29,7 @@
  
 .mySlider .slide nav .slider-container article h2{
     color: #FFF;
-    font-family: "NewHeroMedium" ;
+    font-family: "NewHeroMedium";
     font-size: 48px;
     font-style: normal;
     font-weight: 600; 

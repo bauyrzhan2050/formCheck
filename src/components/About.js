@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from "react";
+
 import "./css/About.css";
 import Picture from "../img/blogTwoPic.svg";
 import { HashLink as Link } from "react-router-hash-link";
@@ -20,12 +22,25 @@ import lgShare from "lightgallery/plugins/share";
 import lgRotate from "lightgallery/plugins/rotate";
 
 function About() {
-  // let blogPicture = "фотография блока 2";
-  // const [isZoomed, setIsZoomed] = useState(false);
+  const [text, setText] = useState("");
+  const originalText = "Об организации";
 
-  // const toggleZoom = () => {
-  //   setIsZoomed(!isZoomed);
-  // };
+  useEffect(() => {
+    let currentIndex = 0;
+
+    const intervalId = setInterval(() => {
+      if (currentIndex <= originalText.length) {
+        setText(originalText.substring(0, currentIndex));
+        currentIndex++;
+      } else {
+        currentIndex = 0;
+      }
+    }, 200);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [originalText]);
 
   return (
     <div className="main_blog">
@@ -37,7 +52,7 @@ function About() {
         </LightGallery>
         <div className="left_side">
           <div className="info_blog">
-            <h2>Об организации</h2>
+            <h2>{text}</h2>
 
             <div className="line"> </div>
             {/* <img className="mob_pic" src={Picture} /> */}

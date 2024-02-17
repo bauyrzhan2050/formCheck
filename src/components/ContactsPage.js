@@ -1,5 +1,26 @@
 import "./css/ContactsPage.css";
+import React, { useState, useEffect } from "react";
+
 function ContactsPage() {
+  const [text, setText] = useState("");
+  const originalText = "Наши контакты";
+
+  useEffect(() => {
+    let currentIndex = 0;
+
+    const intervalId = setInterval(() => {
+      if (currentIndex <= originalText.length) {
+        setText(originalText.substring(0, currentIndex));
+        currentIndex++;
+      } else {
+        currentIndex = 0;
+      }
+    }, 200);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [originalText]);
   return (
     <div className="contact_page">
       <div className="contact_container">
@@ -10,7 +31,7 @@ function ContactsPage() {
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>{" "}
         <div className="contact_info ">
-          <h4>Наши контакты</h4>
+          <h4>{text}</h4>
           <h5>г. Астана, район Есиль, пр.Тұран, здание 49</h5> <br />
           <h5 className="footer_phone">+7 (707)-736-98-78</h5> <br />
           <h5>

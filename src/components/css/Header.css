@@ -67,7 +67,7 @@ header .container a{
 
 }
 header .container a:hover{
-  box-shadow: 0 0 10px 0 #69ABED inset, 0 0 10px 4px #69ABED;
+  box-shadow: 0 0 10px 0 #69ABED inset, 0 0 10px 4px #69ABED; 
 
 }
 

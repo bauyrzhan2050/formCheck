@@ -24,6 +24,7 @@
     line-height: 100%; 
     text-transform: uppercase;
     margin-bottom: 30px;
+    height: 40px;
 }
 .contact_page .contact_container .contact_info .footer_phone{
     margin-bottom: 0px;

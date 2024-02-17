@@ -28,13 +28,12 @@
 }
 .projectFile .projectFile_menu .projectFile_menuFlex .projectFile_text h2{
     color: #151515;
-    
     font-family: "NewHeroMedium";
     font-size: 40px;
     font-style: normal;
     font-weight: 500;
     line-height: 50px; /* 125% */
-    
+    height: 50px;
     }
 .projectFile .projectFile_menu .projectFile_menuFlex .projectFile_text .line{
     width: 30px;

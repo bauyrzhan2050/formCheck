@@ -3,6 +3,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Img1 from "../img/Rectangle.svg";
+import Img2 from "../img/Rectangle2.svg";
+import Img3 from "../img/Rectangle3.svg";
+import Img4 from "../img/Rectangle4.svg";
+import Img5 from "../img/Rectangle5.svg";
 // LightGallery.css
 import LightGallery from "lightgallery/react/Lightgallery.es5";
 import "lightgallery/css/lightgallery.css";
@@ -63,7 +67,13 @@ function OurProjects() {
 
             {/* ----------------------------------------1 */}
             <nav className="sliders_project">
-              <div className="slideTwo slide"></div>
+              <LightGallery
+                plugins={[lgZoom, lgThumbnail, lgAutoplay, lgShare, lgRotate]}
+              >
+                <a href={Img2}>
+                  <div className="slideTwo slide"></div>
+                </a>
+              </LightGallery>
               <article>
                 <h2>
                   Программа международной стажировки по медицинскому бизнесу в
@@ -74,7 +84,13 @@ function OurProjects() {
             </nav>
             {/* ----------------------------------------2 */}
             <nav className="sliders_project">
-              <div className="slideThree slide"></div>
+              <LightGallery
+                plugins={[lgZoom, lgThumbnail, lgAutoplay, lgShare, lgRotate]}
+              >
+                <a href={Img3}>
+                  <div className="slideThree slide"></div>
+                </a>
+              </LightGallery>
               <article>
                 <h2>
                   Программа стажировки «Менеджмент в высшем образовании на
@@ -85,7 +101,13 @@ function OurProjects() {
             </nav>
             {/* ----------------------------------------3 */}
             <nav className="sliders_project">
-              <div className="slideFour slide"></div>
+              <LightGallery
+                plugins={[lgZoom, lgThumbnail, lgAutoplay, lgShare, lgRotate]}
+              >
+                <a href={Img4}>
+                  <div className="slideFour slide"></div>
+                </a>
+              </LightGallery>
               <article>
                 <h2>
                   Международная стажировка «Медицинский бизнес в Южной Корее, г.
@@ -96,7 +118,13 @@ function OurProjects() {
             </nav>
             {/* ----------------------------------------4 */}
             <nav className="sliders_project">
-              <div className="slideFive slide"></div>
+              <LightGallery
+                plugins={[lgZoom, lgThumbnail, lgAutoplay, lgShare, lgRotate]}
+              >
+                <a href={Img5}>
+                  <div className="slideFive slide"></div>
+                </a>
+              </LightGallery>
               <article>
                 <h2>
                   Международная стажировка «Современные стандарты в

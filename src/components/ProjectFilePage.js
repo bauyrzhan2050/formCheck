@@ -24,11 +24,14 @@ import Fut6 from "../img/future6.svg";
 import Fut7 from "../img/future7.svg";
 import Fut8 from "../img/future8.svg";
 import Fut from "../img/fnew.svg";
+import React, { useState, useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
-import { useState } from "react";
 import Modal from "react-modal";
 import InputMask from "react-input-mask";
 // import ModalWindow from "./ModalWindow";
+
+import axios from "axios";
 
 Modal.setAppElement("#root");
 
@@ -36,8 +39,16 @@ function ProjectFilePage() {
   const [activeTab, setActiveTab] = useState(0);
   const [modalIsOpen, setmModalIsOpen] = useState(false);
   const [modalContent, setModalContent] = useState("");
-  const [inputValue, setInputValue] = useState("");
-
+  // const [inputValue, setInputValue] = useState("");
+  // -------------------
+  const [firstName, setFirstName] = useState("");
+  const [passNum, setPassNum] = useState("");
+  const [email, setEmail] = useState("");
+  const [tel, setTel] = useState("");
+  const [org, setOrg] = useState("");
+  const [positions, setPositions] = useState("");
+  const form = useRef();
+  // ---------------------
   const openModal = (content) => {
     setModalContent(content);
     setmModalIsOpen(true);
@@ -47,11 +58,30 @@ function ProjectFilePage() {
     setmModalIsOpen(false);
   };
 
-  const numberValidation = (el) => {
-    const newValue = el.target.value.replace(/[^0-9]/g, "");
-    setInputValue(newValue);
-  };
+  // const numberValidation = (el) => {
+  //   const newValue = el.target.value.replace(/[^0-9]/g, "");
+  //   setInputValue(newValue);
+  // };
 
+  const [text, setText] = useState("");
+  const originalText = "Наши проекты";
+
+  useEffect(() => {
+    let currentIndex = 0;
+
+    const intervalId = setInterval(() => {
+      if (currentIndex <= originalText.length) {
+        setText(originalText.substring(0, currentIndex));
+        currentIndex++;
+      } else {
+        currentIndex = 0;
+      }
+    }, 200);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [originalText]);
   // const submitForm = (shutDown) => {
   //   shutDown.preventDefault();
   // };
@@ -472,6 +502,38 @@ function ProjectFilePage() {
       ),
     },
   ];
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // ---------------
+    emailjs
+      .sendForm("service_z5s499i", "template_bke404c", form.current, {
+        publicKey: "SyrCLg2WsWApM_K7f",
+      })
+      .then(
+        () => {
+          console.log("Message sent");
+        },
+        (error) => {
+          console.log("Message Error:", error.text());
+        }
+      );
+    // -----------------
+    try {
+      await axios.post("http://localhost:3000/submit", {
+        firstName,
+        passNum,
+        email,
+        tel,
+        org,
+        positions,
+      });
+      console.log("информация успешно отправлена");
+    } catch (error) {
+      console.error("Error!", error.response.data.error);
+    }
+  };
   return (
     <div className="projectFile" id="projects">
       <Modal
@@ -480,7 +542,11 @@ function ProjectFilePage() {
         onRequestClose={closeModal}
         contentLabel="exampleModal"
       >
-        <form className="appointment_insaidBlock">
+        <form
+          useRef={form}
+          className="appointment_insaidBlock"
+          onSubmit={handleSubmit}
+        >
           <img className="btnClouse" src={Cross} onClick={closeModal} />
           <h2>Записаться на стажировку</h2>
           <div className="line"></div>
@@ -493,26 +559,67 @@ function ProjectFilePage() {
             placeholder="ФИО по паспорту"
             required
             minLength={3}
+            value={firstName}
+            onChange={(e) => {
+              setFirstName(e.target.value);
+            }}
           />
           <input
-            value={inputValue}
+            // value={inputValue}
             name="passport"
             type="text"
             placeholder="№ паспорта"
             required
-            onChange={numberValidation}
+            // onChange={numberValidation}
+            value={passNum}
+            onChange={(e) => {
+              setPassNum(e.target.value);
+            }}
           />
           <InputMask
+            name="phone"
             required
             type="tel"
             placeholder="+7 (...)"
             mask="+7 (999) 999-99-99"
+            value={tel}
+            onChange={(e) => {
+              setTel(e.target.value);
+            }}
           />
-          <input type="email" placeholder="Эл.почта" required />
-          <input name="org" type="text" placeholder="Организация" />
-          <input name="positions" type="text" placeholder="Должность" />
+          <input
+            name="email"
+            type="email"
+            placeholder="Эл.почта"
+            required
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+          />
+
+          <input
+            name="org"
+            type="text"
+            placeholder="Организация"
+            required
+            value={org}
+            onChange={(e) => {
+              setOrg(e.target.value);
+            }}
+          />
+          <input
+            name="positions"
+            type="text"
+            placeholder="Должность"
+            required
+            value={positions}
+            onChange={(e) => {
+              setPositions(e.target.value);
+            }}
+          />
           {/* <button onClick={submitForm}>Отправить</button> */}
-          <button>Отправить</button>
+          <button type="submit">Отправить</button>
         </form>
       </Modal>
 
@@ -522,7 +629,7 @@ function ProjectFilePage() {
         <div className="projectFile_menu">
           <div className="projectFile_menuFlex">
             <div className="projectFile_text">
-              <h2>Наши проекты</h2>
+              <h2>{text}</h2>
               <div className="line"></div>
             </div>
             <div className="tabs">
